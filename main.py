@@ -71,7 +71,7 @@ class Sudoku:
     def newgame(self):
         try:
             response = requests.get(
-                'http://www.cs.utep.edu/cheon/ws/sudoku/new/', {'size': '9', 'level': str(self.level)})
+                'https://www.cs.utep.edu/cheon/ws/sudoku/new/', {'size': '9', 'level': str(self.level)}, verify=False)
         except Exception as e:
             print(f'Error: {e}')
             quit(1)
